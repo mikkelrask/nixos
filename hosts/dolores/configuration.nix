@@ -164,7 +164,7 @@
   
   # RICE RICE BABY
   stylix.enable = true;
-  stylix.image = /home/mr/Pictures/Wallpapers/Catppuccin/landscapes/evening-sky.png;
+  stylix.image = /home/mr/Pictures/Wallpapers/Catppuccin/landscapes/yosemite.png;
   stylix.polarity = "dark";
   stylix.fonts = {
     monospace = {
