@@ -88,7 +88,7 @@
   environment.systemPackages = with pkgs; [
      clang
      go
-     lua51
+     lua
      lua51Packages.luarocks-nix
      lua51Packages.luasnip
      php
