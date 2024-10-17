@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, modules, ... }:
 
 {
   imports =
@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ./main-user.nix
       inputs.home-manager.nixosModules.default
+      ../../modules/network-drives.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -82,13 +83,12 @@
   main-user.enable = true;
   main-user.userName = "mr";
 
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
      clang
      go
-     lua51
+     lua
      lua51Packages.luarocks-nix
      lua51Packages.luasnip
      php

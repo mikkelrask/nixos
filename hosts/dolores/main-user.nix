@@ -35,6 +35,7 @@ in
         flatpak
         gnome-software
 	gnome-boxes
+  moonlight-qt
         heroic
         hyprland
         hyprlock
