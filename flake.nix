@@ -22,7 +22,7 @@
       system = "x86_64-linux";
       modules = [
         ./hosts/dolores/configuration.nix
-	stylix.nixosModules.stylix
+	      stylix.nixosModules.stylix
         inputs.home-manager.nixosModules.default
       ];
     };

@@ -163,7 +163,11 @@
   
   # RICE RICE BABY
   stylix.enable = true;
-  stylix.image = /home/mr/Pictures/Wallpapers/Catppuccin/landscapes/yosemite.png;
+  let homeDir = "/home/mr";
+  in {
+    stylix.image = "${homeDir}/Pictures/Wallpapers/Catppuccin/landscapes/yosemite.png";
+    home.homeDirectory = homeDir;
+  }
   stylix.polarity = "dark";
   stylix.fonts = {
     monospace = {

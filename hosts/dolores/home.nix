@@ -1,6 +1,6 @@
 { pkgs, wayland, config, stylix, lib, ... }:
 let
-  waybar_conf_dir = "/home/mr/.config/waybar/egosummiki";
+  waybar_conf_dir = "${home.homeDirectory}/.config/waybar/egosummiki";
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     hyprpaper & 
     waybar -c ${waybar_conf_dir}/config -s ${waybar_conf_dir}/style.css &
@@ -12,7 +12,7 @@ in
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "mr";
-  home.homeDirectory = "/home/mr";
+  home.homeDirectory = "${home.homeDirectory}";
   home.stateVersion = "24.05";
 
   # Let Home Manager install and manage itself.
@@ -24,27 +24,27 @@ in
       "$mod" = "ALT";
       "$terminal" = "kitty";
       "$filemanager" = "pcmanfm";
-      "$menu" = "/home/mr/.local/bin/launcher";
+      "$menu" = "${home.homeDirectory}/.local/bin/launcher";
 
       monitor = "eDP-1,1920x1080@60,0x0,1";
 
       exec-once = ''${startupScript}/bin/start'';
 
       general = {
-	allow_tearing = false;
+        allow_tearing = false;
       };
 
       input = {
         kb_layout = "dk";
         kb_options = "caps:swapescape";
         follow_mouse = "1";
-	touchpad = {
-	  natural_scroll = true;
-	  disable_while_typing = true;
-	};
+        touchpad = {
+          natural_scroll = true;
+          disable_while_typing = true;
+        };
       };
       gestures = {
-	workspace_swipe = true;
+        workspace_swipe = true;
       };
       
       decoration = {
