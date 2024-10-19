@@ -6,7 +6,6 @@
       ./hardware-configuration.nix
       ./main-user.nix
       inputs.home-manager.nixosModules.default
-      ../../modules/network-drives.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -180,5 +179,4 @@
       name = "DejaVu Serif";
     };
   };
-  #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 }
