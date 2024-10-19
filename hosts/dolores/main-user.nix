@@ -25,8 +25,8 @@ in
       extraGroups = [ "wheel" "docker" ];
       packages = with pkgs; [
         bat
-        bitwarden-desktop
 	brave
+        jq
         cava
         doas
         eza
@@ -73,6 +73,7 @@ in
         pstree
         python3
         python311Packages.pip
+        python312Packages.pillow
         ripgrep
         unclutter
         unzip
