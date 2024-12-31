@@ -17,54 +17,53 @@ in
     };
   };
 
+
   config = lib.mkIf cfg.enable{
     users.users.${cfg.userName} = {
       isNormalUser = true;
       shell = pkgs.zsh;
       initialPassword = "toor";
-      extraGroups = [ "wheel" "docker" ];
+      extraGroups = [ "dialout" "wheel" "docker" ];
+
       packages = with pkgs; [
+        android-tools
+        archiver
         bat
-        bitwarden-desktop
-	brave
-        cava
+        brave
+        btop
+        google-chrome
+        clang
+        direnv
         doas
+        docker
         eza
         fd
         figma-linux
+        file
         flatpak
+        fprintd
+        fzf
+        git
+        gnome-boxes
         gnome-software
-	gnome-boxes
-        heroic
+        gnumake
         hyprland
         hyprlock
         hyprpaper
+        hyprshot
         kitty
-        mpv
-        neofetch
-        nodejs_22
-        ranger
-        steam
-        stow
-        swaynotificationcenter
-        sxiv
-        tmux
-        trayscale
-        waybar
-        wofi
-        yarn
-        android-tools
-        btop
-        clang
-        docker
-        file
-        fprintd
+        lazygit
+        libarchive-qt
         libfprint
         libfprint-2-tod1-vfs0090
-        fzf
-        git
-        gnumake
+        moonlight-qt
+        mpv
+        mullvad
+        mullvad-vpn
+        nerdfetch
         neovim
+        typescript-language-server
+        nodejs_22
         pavucontrol
         pcmanfm
         pipx
@@ -72,15 +71,28 @@ in
         pstree
         python3
         python311Packages.pip
+        ranger
         ripgrep
-        unclutter
+        sshfs
+        steam
+        stow
+        swaynotificationcenter
+        sxiv
+        tmux
+        trayscale
         unzip
         usbutils
         vim
-        wget
-	zed-editor
-        zsh
         vscode
+        waybar
+        wget
+        wf-recorder
+        wl-screenrec
+        wofi
+        wofi-emoji
+        yarn
+        zed-editor
+        zsh
       ];
     };
   };

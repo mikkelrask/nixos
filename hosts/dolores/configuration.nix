@@ -1,11 +1,24 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, stylix, ... }:
 
+let 
+  homeDir = "/home/mr";
+in 
 {
   imports =
     [ 
       ./hardware-configuration.nix
       ./main-user.nix
       inputs.home-manager.nixosModules.default
+      ../../modules/default.nix
+    ];
+
+  
+  programs.steam.enable = true;
+
+  nixpkgs.overlays = [ # WORKAROUND for 7zz
+      (final: prev: {
+        _7zz = prev._7zz.override { useUasm = true; };
+      })
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -16,8 +29,16 @@
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
   time.timeZone = "Europe/Copenhagen";
 
+  services.udev.packages = [ 
+    pkgs.platformio-core
+    pkgs.openocd
+  ];
+
+  nix.nixPath = [ "$homeDir/NIXOSSS" ];
+
   # Bluetooth?
   hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -29,6 +50,27 @@
   services.xserver.xkb.layout = "dk";
   services.xserver.xkb.options = "eurosign:e,caps:escape";
 
+  # RICE RICE BABY
+  stylix.enable = true;
+  stylix.image = ./wallpaper.jpg;
+  stylix.autoEnable = true;
+  stylix.polarity = "dark";
+  stylix.fonts = {
+    monospace = {
+      package = pkgs.fantasque-sans-mono;
+      name = "FantasqueSansMono";
+    };
+    sansSerif = {
+      package = pkgs.inter;
+      name = "Inter";
+    };
+    serif = {
+      package = pkgs.dejavu_fonts;
+      name = "DejaVu Serif";
+    };
+  };
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-city-dark.yaml";
+
   # Enable sound.
   services.pipewire = {
      enable = true;
@@ -36,15 +78,20 @@
   };
 
   fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk
-    hack-font
-    noto-fonts-emoji
-    fira-code
-    fantasque-sans-mono
+    nerd-fonts.noto
+    noto-fonts-cjk-sans
+    nerd-fonts.hack
+    nerd-fonts.fira-code
+    nerd-fonts.fantasque-sans-mono
     fira-code-symbols
-    (nerdfonts.override { fonts = [ "Hack" "FantasqueSansMono" "FiraCode" "DroidSansMono" ]; })
-  ];
+ ];
+
+  programs.nh = { # Nix Helper
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/home/mr/NIXOSSS";
+  };
   
   # Home manager
   home-manager = {
@@ -54,7 +101,7 @@
     };
     backupFileExtension = "backup";
   };
-      
+
   programs.hyprland.enable = true;
   programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
@@ -70,49 +117,60 @@
     enable = true;
   };
 
+
   # Garbage collection
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
-    };
+  #nix.gc = {
+  #  automatic = true;
+  #  dates = "weekly";
+  #  options = "--delete-older-than 7d";
+  #  };
   
+  # Increase buffer size
+  nix.settings.download-buffer-size = "256M"; # Increase size as needed
+
+  nix.settings.trusted-users = [
+    "root"
+    "@wheel"
+    "mr"
+  ];
+  nix.settings.allowed-users = [
+    "root"
+    "@wheel"
+    "mr"
+  ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   main-user.enable = true;
   main-user.userName = "mr";
 
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     clang
-     go
-     lua
-     lua51Packages.luarocks-nix
-     lua51Packages.luasnip
-     php
-     php83Packages.composer
      cargo
-     #javac
-     jre
-     julia
-     tree-sitter
-     wl-clipboard-rs
+     clang
+     code-minimap
      file
      fprintd  
      fzf
      git
      gnumake
+     go
+     jq
+     jre
+     julia
      libfprint
      libfprint-2-tod1-vfs0090
+     lua
+     lua-language-server
+     lua51Packages.luarocks-nix
+     lua51Packages.luasnip
+     php
+     php83Packages.composer
+     pulseaudioFull
+     tokyonight-gtk-theme
+     tree-sitter
+     wl-clipboard-rs
   ];
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -143,7 +201,7 @@
 
   # DOAS 
   security.doas.enable = true;
-  security.sudo.enable = false;
+  security.sudo.enable = true;
   security.doas.extraRules = [{
    users = ["mr"];
    keepEnv = true; 
@@ -161,24 +219,4 @@
 
   # flake.nix
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
-  # RICE RICE BABY
-  stylix.enable = true;
-  stylix.image = /home/mr/Pictures/Wallpapers/Catppuccin/landscapes/yosemite.png;
-  stylix.polarity = "dark";
-  stylix.fonts = {
-    monospace = {
-      package = pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ];};
-      name = "FantasqueSansMono";
-    };
-    sansSerif = {
-      package = pkgs.inter;
-      name = "Inter";
-    };
-    serif = {
-      package = pkgs.dejavu_fonts;
-      name = "DejaVu Serif";
-    };
-  };
-  #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 }
