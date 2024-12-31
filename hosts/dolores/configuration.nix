@@ -33,7 +33,7 @@ in
     pkgs.openocd
   ];
 
-  nix.nixPath = [ "$homeDir/.nixos" ];
+  nix.nixPath = [ "/home/mr/.nixos" ];
 
   # Bluetooth?
   hardware.bluetooth.enable = true;
