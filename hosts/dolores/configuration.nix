@@ -9,7 +9,6 @@ in
       ./hardware-configuration.nix
       ./main-user.nix
       inputs.home-manager.nixosModules.default
-      ../../modules/default.nix
     ];
 
   
