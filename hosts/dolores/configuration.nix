@@ -51,7 +51,7 @@ in
 
   # RICE RICE BABY
   stylix.enable = true;
-  stylix.image = ./wallpaper.jpg;
+  stylix.image = ./wallpaper.png;
   stylix.autoEnable = true;
   stylix.polarity = "dark";
   stylix.fonts = {
