@@ -28,7 +28,7 @@ in
 
     settings = {
       "$mod" = "ALT";
-      "$terminal" = "/home/mr/.local/bin/ghostty --custom-shader='/home/mr/.config/ghostty/shaders/in-game-crt.glsl'";
+      "$terminal" = "/home/mr/.local/bin/ghostty";
       "$browser" = "brave --enable-features=TouchpadOverscrollHistoryNavigation";
       "$filemanager" = "pcmanfm";
       "$menu" = "${launcher}";
