@@ -29,6 +29,7 @@ in
     settings = {
       "$mod" = "ALT";
       "$terminal" = "/home/mr/.local/bin/ghostty";
+      "$notetaker" = "/home/mr/.local/bin/notetaker";
       "$browser" = "brave --enable-features=TouchpadOverscrollHistoryNavigation";
       "$filemanager" = "pcmanfm";
       "$menu" = "${launcher}";
@@ -78,9 +79,53 @@ in
       };
       "windowrules" = [
         { 
-          title = "Firefox";
-          workspace = "1";
+          title = ".*Brave.*";
+          workspace = "2";
+        },
+        { 
+          title = "*google-chrome*";
+          workspace = "2";
+        },
+        {
+          title = "Discord";
+          workspace = "4";
+        },
+        {
+          title = "Steam";
+          workspace = "7"
+        },
+        {
+          title = "Heroic";
+          workspace = "7"
+        },
+        {
+          title = "Slack";
+          workspace = "3"
+        },
+        {
+          title = "Figma-linux";
+          workspace = "6"
+        },
+        {
+          title = "geforce-now";
+          workspace = "7"
+        },
+        {
+          title = "nvim-diary";
+          workspace = "4"
         }
+        {
+          title = "gnome-software";
+          workspace = "6"
+        },
+        {
+          title = "blueman";
+          workspace = "9"
+        },
+        {
+          title = "blueman";
+          workspace = "9"
+        },
       ];
 
       bindm = [
@@ -95,6 +140,7 @@ in
         "$mod, E, exec, wofi-emoji"
         "CTRL $mod, L, exec, hyprlock"
         "$mod, F, fullscreen"
+        "@mod, n, exec, $notetaker"
         "$mod SHIFT, X, exit"
         "$mod SHIFT, Q, killactive"
         "$mod, W, exec, $browser"
@@ -113,7 +159,7 @@ in
         "$mod, k, movefocus, d"
         "$mod, l, movefocus, r"
 
-        # Swap windos
+        # Swap windows
         "$mod SHIFT, h, movewindow, l"
         "$mod SHIFT, j, movewindow, u"
         "$mod SHIFT, k, movewindow, d"
