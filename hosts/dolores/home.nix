@@ -81,35 +81,35 @@ in
         { 
           title = ".*Brave.*";
           workspace = "2";
-        },
+        }
         { 
           title = "*google-chrome*";
           workspace = "2";
-        },
+        }
         {
           title = "Discord";
           workspace = "4";
-        },
+        }
         {
           title = "Steam";
           workspace = "7"
-        },
+        }
         {
           title = "Heroic";
           workspace = "7"
-        },
+        }
         {
           title = "Slack";
           workspace = "3"
-        },
+        }
         {
           title = "Figma-linux";
           workspace = "6"
-        },
+        }
         {
           title = "geforce-now";
           workspace = "7"
-        },
+        }
         {
           title = "nvim-diary";
           workspace = "4"
@@ -117,15 +117,15 @@ in
         {
           title = "gnome-software";
           workspace = "6"
-        },
+        }
         {
           title = "blueman";
           workspace = "9"
-        },
+        }
         {
           title = "blueman";
           workspace = "9"
-        },
+        }
       ];
 
       bindm = [
