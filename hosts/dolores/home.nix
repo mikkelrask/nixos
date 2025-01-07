@@ -29,7 +29,6 @@ in
     settings = {
       "$mod" = "ALT";
       "$terminal" = "/home/mr/.local/bin/ghostty";
-      "$notetaker" = "/home/mr/.local/bin/notetaker";
       "$browser" = "brave --enable-features=TouchpadOverscrollHistoryNavigation";
       "$filemanager" = "pcmanfm";
       "$menu" = "${launcher}";
@@ -90,7 +89,6 @@ in
         "$mod, E, exec, wofi-emoji"
         "CTRL $mod, L, exec, hyprlock"
         "$mod, F, fullscreen"
-        "$mod, n, exec, $notetaker"
         "$mod SHIFT, X, exit"
         "$mod SHIFT, Q, killactive"
         "$mod, W, exec, $browser"
@@ -109,7 +107,7 @@ in
         "$mod, k, movefocus, d"
         "$mod, l, movefocus, r"
 
-        # Swap windows
+        # Swap windos
         "$mod SHIFT, h, movewindow, l"
         "$mod SHIFT, j, movewindow, u"
         "$mod SHIFT, k, movewindow, d"
@@ -146,50 +144,6 @@ in
     binde = , j, resizeactive, 0 10
     bind = , escape, submap, reset
     submap = reset
-
-    windowrule:
-      title: .*Brave.*
-      workspace: 2
-
-    windowrule:
-      title: *google-chrome*
-      workspace: 2
-
-    windowrule:
-      title: Discord
-      workspace: 4
-
-    windowrule:
-      title: Steam
-      workspace: 7
-
-    windowrule:
-      title: Heroic
-      workspace: 7
-
-    windowrule:
-      title: Slack
-      workspace: 3
-
-    windowrule:
-      title: Figma-linux
-      workspace: 6
-
-    windowrule:
-      title: geforce-now
-      workspace: 7
-
-    windowrule:
-      title: notetaker
-      workspace: 4
-
-    windowrule:
-      title: gnome-software
-      workspace: 6
-
-    windowrule:
-      title: blueman
-      workspace: 9
   '';
 }
 
