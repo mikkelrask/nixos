@@ -76,6 +76,12 @@ in
         disable_splash_rendering = true;
         font_family = "monospace";
       };
+      "windowrules" = [
+        { 
+          title = "Firefox";
+          workspace = "1";
+        }
+      ];
 
       bindm = [
         "$mod, mouse:272, movewindow"

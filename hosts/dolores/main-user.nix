@@ -33,6 +33,7 @@ in
         btop
         google-chrome
         clang
+        discord
         direnv
         doas
         docker
