@@ -77,56 +77,6 @@ in
         disable_splash_rendering = true;
         font_family = "monospace";
       };
-      "windowrules" = [
-        { 
-          title = ".*Brave.*";
-          workspace = "2";
-        }
-        { 
-          title = "*google-chrome*";
-          workspace = "2";
-        }
-        {
-          title = "Discord";
-          workspace = "4";
-        }
-        {
-          title = "Steam";
-          workspace = "7"
-        }
-        {
-          title = "Heroic";
-          workspace = "7"
-        }
-        {
-          title = "Slack";
-          workspace = "3"
-        }
-        {
-          title = "Figma-linux";
-          workspace = "6"
-        }
-        {
-          title = "geforce-now";
-          workspace = "7"
-        }
-        {
-          title = "nvim-diary";
-          workspace = "4"
-        }
-        {
-          title = "gnome-software";
-          workspace = "6"
-        }
-        {
-          title = "blueman";
-          workspace = "9"
-        }
-        {
-          title = "blueman";
-          workspace = "9"
-        }
-      ];
 
       bindm = [
         "$mod, mouse:272, movewindow"
@@ -140,7 +90,7 @@ in
         "$mod, E, exec, wofi-emoji"
         "CTRL $mod, L, exec, hyprlock"
         "$mod, F, fullscreen"
-        "@mod, n, exec, $notetaker"
+        "$mod, n, exec, $notetaker"
         "$mod SHIFT, X, exit"
         "$mod SHIFT, Q, killactive"
         "$mod, W, exec, $browser"
@@ -196,6 +146,50 @@ in
     binde = , j, resizeactive, 0 10
     bind = , escape, submap, reset
     submap = reset
+
+    windowrule:
+      title: .*Brave.*
+      workspace: 2
+
+    windowrule:
+      title: *google-chrome*
+      workspace: 2
+
+    windowrule:
+      title: Discord
+      workspace: 4
+
+    windowrule:
+      title: Steam
+      workspace: 7
+
+    windowrule:
+      title: Heroic
+      workspace: 7
+
+    windowrule:
+      title: Slack
+      workspace: 3
+
+    windowrule:
+      title: Figma-linux
+      workspace: 6
+
+    windowrule:
+      title: geforce-now
+      workspace: 7
+
+    windowrule:
+      title: notetaker
+      workspace: 4
+
+    windowrule:
+      title: gnome-software
+      workspace: 6
+
+    windowrule:
+      title: blueman
+      workspace: 9
   '';
 }
 
