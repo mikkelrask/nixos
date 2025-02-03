@@ -51,7 +51,7 @@ in
 
   # RICE RICE BABY
   stylix.enable = true;
-  stylix.image = ./wallpaper.png;
+  stylix.image = ./yosimite.png;
   stylix.autoEnable = true;
   stylix.polarity = "dark";
   stylix.fonts = {
@@ -208,9 +208,6 @@ in
   }];
 
   programs.zsh.enable = true; 
-  environment.variables = {
-    NIX_BUILD_SHELL = "${pkgs.zsh}/bin/zsh";
-  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
