@@ -51,7 +51,7 @@ in
 
   # RICE RICE BABY
   stylix.enable = true;
-  stylix.image = ./yosimite.png;
+  stylix.image = ./yosemite.png;
   stylix.autoEnable = true;
   stylix.polarity = "dark";
   stylix.fonts = {
