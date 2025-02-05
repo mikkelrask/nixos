@@ -31,10 +31,9 @@ in
         bat
         brave
         btop
-        google-chrome
         clang
-        discord
         direnv
+        discord
         doas
         docker
         eza
@@ -48,6 +47,7 @@ in
         gnome-boxes
         gnome-software
         gnumake
+        google-chrome
         hyprland
         hyprlock
         hyprpaper
@@ -61,9 +61,8 @@ in
         mpv
         mullvad
         mullvad-vpn
-        nerdfetch
         neovim
-        typescript-language-server
+        nerdfetch
         nodejs_22
         pavucontrol
         pcmanfm
@@ -74,6 +73,7 @@ in
         python311Packages.pip
         ranger
         ripgrep
+        ryujinx
         sshfs
         steam
         stow
@@ -81,13 +81,14 @@ in
         sxiv
         tmux
         trayscale
+        typescript-language-server
         unzip
         usbutils
         vim
         vscode
         waybar
-        wget
         wf-recorder
+        wget
         wl-screenrec
         wofi
         wofi-emoji
