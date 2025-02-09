@@ -60,7 +60,7 @@ in
       };
       
       decoration = {
-        rounding = 8;
+        rounding = 12;
         inactive_opacity = 0.8;
         shadow = {
           enabled = true;
