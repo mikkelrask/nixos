@@ -33,13 +33,13 @@ in
         brave
         btop
         clang
+        code-cursor
         direnv
         discord
         doas
         docker
         eza
         fd
-        figma-linux
         file
         flatpak
         fprintd
@@ -48,7 +48,6 @@ in
         gnome-boxes
         gnome-software
         gnumake
-        google-chrome
         hyprland
         hyprlock
         hyprpaper
@@ -60,8 +59,6 @@ in
         libfprint-2-tod1-vfs0090
         moonlight-qt
         mpv
-        mullvad
-        mullvad-vpn
         neovim
         nerdfetch
         nodejs_22
@@ -93,8 +90,6 @@ in
         wl-screenrec
         wofi
         wofi-emoji
-        yarn
-        zed-editor
         zsh
       ];
     };
