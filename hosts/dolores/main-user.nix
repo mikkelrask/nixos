@@ -69,6 +69,7 @@ in
         pcmanfm
         pipx
         plexamp
+        protonvpn-gui
         pstree
         python3
         python311Packages.pip
