@@ -29,6 +29,7 @@ in
         android-tools
         archiver
         bat
+        bitwarden
         brave
         btop
         clang
