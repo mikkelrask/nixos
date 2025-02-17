@@ -21,8 +21,8 @@ in
     ];
 
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/sda";
 
   networking.hostName = "x240ofdoom"; # Define your hostname.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
