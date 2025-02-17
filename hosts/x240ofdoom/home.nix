@@ -33,7 +33,7 @@ in
       "$filemanager" = "pcmanfm";
       "$menu" = "${launcher}";
 
-      monitor = "eDP-1,1920x1080@60,0x0,1";
+      monitor = "eDP-1,1366@768@60,0x0,1";
 
       exec-once = ''${startupScript}/bin/start'';
 
