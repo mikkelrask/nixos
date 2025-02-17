@@ -28,7 +28,7 @@ in
 
     settings = {
       "$mod" = "ALT";
-      "$terminal" = "/home/mr/.local/bin/ghostty";
+      "$terminal" = "ghostty";
       "$browser" = "brave --enable-features=TouchpadOverscrollHistoryNavigation";
       "$filemanager" = "pcmanfm";
       "$menu" = "${launcher}";
