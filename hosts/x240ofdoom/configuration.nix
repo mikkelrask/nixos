@@ -24,7 +24,7 @@ in
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "dolores"; # Define your hostname.
+  networking.hostName = "x240ofdoom"; # Define your hostname.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
   time.timeZone = "Europe/Copenhagen";
 
@@ -89,7 +89,7 @@ in
     enable = true;
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "/home/mr/NIXOSSS";
+    flake = "/home/mr/.nixos";
   };
   
   # Home manager
@@ -145,26 +145,9 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     cargo
-     clang
-     code-minimap
      file
-     fprintd  
      fzf
      git
-     gnumake
-     go
-     jq
-     jre
-     julia
-     libfprint
-     libfprint-2-tod1-vfs0090
-     lua
-     lua-language-server
-     lua51Packages.luarocks-nix
-     lua51Packages.luasnip
-     php
-     php83Packages.composer
      pulseaudioFull
      tokyonight-gtk-theme
      tree-sitter
@@ -214,7 +197,7 @@ in
 
   # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
   # and migrated your data accordingly.
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 
   # flake.nix
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

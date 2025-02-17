@@ -16,11 +16,11 @@
   };
 
   outputs = { home-manager, self, nixpkgs, stylix, ... }@inputs: {
-    nixosConfigurations.dolores = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.x240ofdoom = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       system = "x86_64-linux";
       modules = [
-        ./hosts/dolores/configuration.nix
+        ./hosts/x240ofdoom/configuration.nix
         stylix.nixosModules.stylix
         inputs.home-manager.nixosModules.default
       ];

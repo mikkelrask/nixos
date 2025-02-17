@@ -26,29 +26,25 @@ in
       extraGroups = [ "dialout" "wheel" "docker" ];
 
       packages = with pkgs; [
-        android-tools
+        appimage-run
         archiver
         bat
         bitwarden
         brave
         btop
-        clang
         direnv
         discord
         doas
         docker
         eza
         fd
-        figma-linux
         file
         flatpak
-        fprintd
         fzf
         git
         gnome-boxes
         gnome-software
         gnumake
-        google-chrome
         hyprland
         hyprlock
         hyprpaper
@@ -60,22 +56,16 @@ in
         libfprint-2-tod1-vfs0090
         moonlight-qt
         mpv
-        mullvad
-        mullvad-vpn
         neovim
         nerdfetch
         nodejs_22
         pavucontrol
         pcmanfm
         pipx
-        plexamp
-        protonvpn-gui
         pstree
         python3
         python311Packages.pip
-        ranger
         ripgrep
-        ryujinx
         sshfs
         steam
         stow
@@ -94,8 +84,8 @@ in
         wl-screenrec
         wofi
         wofi-emoji
+        yazi
         yarn
-        zed-editor
         zsh
       ];
     };
