@@ -106,7 +106,6 @@ in
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
-  services.fprintd.enable = true;
 
   services.flatpak.enable = true;
   nixpkgs.config.allowUnfree = true;
@@ -125,7 +124,7 @@ in
   #  };
   
   # Increase buffer size
-  nix.settings.download-buffer-size = "256M"; # Increase size as needed
+  nix.settings.download-buffer-size = "1024M"; # Increase size as needed
 
   nix.settings.trusted-users = [
     "root"
