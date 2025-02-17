@@ -27,7 +27,6 @@ in
 
       packages = with pkgs; [
         appimage-run
-        archiver
         bat
         bitwarden
         brave
@@ -49,6 +48,7 @@ in
         hyprlock
         hyprpaper
         hyprshot
+	ghostty
         kitty
         lazygit
         libarchive-qt
