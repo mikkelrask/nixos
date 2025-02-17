@@ -66,6 +66,7 @@ in
           enabled = true;
         };
         blur = {
+          new_optimizations = false;
           enabled = true;
           size = 20;
       	};
