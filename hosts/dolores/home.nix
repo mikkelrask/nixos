@@ -10,6 +10,9 @@ let
     waybar -c ${waybar_conf_dir}/config -s ${waybar_conf_dir}/style.css &
     ${pkgs.trayscale}/bin/trayscale --hide-window &
     ${pkgs.picom}/bin/picom -b &
+    sshfs raske@delos:"/pool/Movies" /home/mr/Movies
+    sshfs raske@delos:"/pool/TV Shows" "/home/mr/TV Shows"
+    sshfs raske@delos:"/pool/Music" /home/mr/Music
   '';
 in
 
