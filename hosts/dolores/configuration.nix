@@ -53,7 +53,7 @@ in
     loader.timeout = 0;
 
   };
-}
+
   networking.hostName = "dolores"; # Define your hostname.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
   time.timeZone = "Europe/Copenhagen";
