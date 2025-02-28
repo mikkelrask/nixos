@@ -10,9 +10,29 @@
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernalParams = [ "quiet" ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+  boot.plymouth = {
+    enable = true;
+    theme = "dna";
+    themePackages = with pkgs; [
+      (adi1090x-plymouth-themes.override {
+          selected_themes = [ "dna" ];
+        })
+    ];
+  };
+  boot.consoleLogLevel = 0;
+  initrd.verbose = false;
+   kernelParams = [
+      "quiet"
+      "splash"
+      "boot.shell_on_fail"
+      "loglevel=3"
+      "rd.systemd.show_status=false"
+      "rd.udev.log_level=3"
+      "udev.log_priority=3"
+    ];
+   boot.loader.timeout = 1;
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/6c56bd8f-32d7-4798-9179-fe2080152776";
