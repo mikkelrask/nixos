@@ -61,6 +61,7 @@ in
         mpv
         neovim
         nerdfetch
+        networkmanagerapplet
         nodejs_22
         pavucontrol
         pcmanfm
