@@ -33,7 +33,7 @@ in
       "$mod" = "ALT";
       "$terminal" = "/home/mr/.local/bin/ghostty";
 #"$browser" = "brave --enable-features=TouchpadOverscrollHistoryNavigation";
-      "$browser" = "appimage-run /home/mr/.local/bin/zen-x86_64.AppImage"
+      "$browser" = "appimage-run /home/mr/.local/bin/zen-x86_64.AppImage";
       "$filemanager" = "pcmanfm";
       "$menu" = "${launcher}";
 
