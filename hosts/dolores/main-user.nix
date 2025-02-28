@@ -27,6 +27,7 @@ in
 
       packages = with pkgs; [
         android-tools
+        appimage-run
         archiver
         bat
         bitwarden
