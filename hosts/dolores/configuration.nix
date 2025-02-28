@@ -26,7 +26,6 @@ in
     loader.efi.canTouchEfiVariables = true;
     plymouth = {
       enable = true;
-      ];
     };
 
     # Enable "Silent Boot"
