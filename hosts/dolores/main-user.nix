@@ -32,6 +32,7 @@ in
         bat
         bitwarden
         qemu
+        virt-manager
         brave
         btop
         clang
