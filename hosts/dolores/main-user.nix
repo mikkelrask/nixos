@@ -31,6 +31,7 @@ in
         archiver
         bat
         bitwarden
+        qemu
         brave
         btop
         clang
