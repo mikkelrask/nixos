@@ -16,7 +16,6 @@ in
       '';
     };
   };
-  android_sdk.accept_license = true;
 
 
   config = lib.mkIf cfg.enable{
