@@ -26,6 +26,7 @@ in
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  android_sdk.accept_license = true;
   wayland.windowManager.hyprland = {
     enable = true;
 

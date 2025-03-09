@@ -12,7 +12,6 @@ in
     ];
 
   
-  android_sdk.accept_license = true;
   programs.steam.enable = true;
 
   nixpkgs.overlays = [ # WORKAROUND for 7zz
