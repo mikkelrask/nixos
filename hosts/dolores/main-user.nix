@@ -25,7 +25,6 @@ in
       initialPassword = "toor";
       extraGroups = [ "dialout" "wheel" "docker" ];
 
-      android_sdk.accept_license = true;
       packages = with pkgs; [
         android-tools
         android-studio-full
