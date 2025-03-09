@@ -27,6 +27,9 @@ in
 
       packages = with pkgs; [
         android-tools
+        android-studio-full
+        android-studio-tools
+        android-udev-rules
         appimage-run
         archiver
         bat
