@@ -136,7 +136,7 @@ in
   nixpkgs.config = {
     allowUnfree = true;
     android_sdk.accept_license = true;
-  }
+  };
 
   # Auto Update
   system.autoUpgrade = {
