@@ -40,7 +40,6 @@ in
         clang
         code-cursor
         direnv
-        discord
         doas
         docker
         eza
