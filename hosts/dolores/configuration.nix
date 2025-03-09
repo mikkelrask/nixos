@@ -14,7 +14,7 @@ in
   
   programs.steam.enable = true;
 
-  nixpkgs.android_sdk.accept_license = true;
+  nixpkgs.packages.android_sdk.accept_license = true;
   nixpkgs.overlays = [ # WORKAROUND for 7zz
       (final: prev: {
         _7zz = prev._7zz.override { useUasm = true; };
@@ -133,7 +133,10 @@ in
   services.fprintd.enable = true;
 
   services.flatpak.enable = true;
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    android_sdk.accept_license = true;
+  }
 
   # Auto Update
   system.autoUpgrade = {
