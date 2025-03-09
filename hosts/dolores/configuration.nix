@@ -14,7 +14,6 @@ in
   
   programs.steam.enable = true;
 
-  nixpkgs.packages.android_sdk.accept_license = true;
   nixpkgs.overlays = [ # WORKAROUND for 7zz
       (final: prev: {
         _7zz = prev._7zz.override { useUasm = true; };
