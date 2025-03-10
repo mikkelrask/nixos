@@ -52,7 +52,6 @@ in
         hyprshot
         kitty
         lazygit
-        libarchive-qt
         libfprint
         libfprint-2-tod1-vfs0090
         moonlight-qt
