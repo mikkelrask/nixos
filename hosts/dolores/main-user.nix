@@ -26,10 +26,6 @@ in
       extraGroups = [ "dialout" "wheel" "docker" ];
 
       packages = with pkgs; [
-        android-tools
-        android-studio-full
-        android-studio-tools
-        android-udev-rules
         appimage-run
         bat
         bitwarden
