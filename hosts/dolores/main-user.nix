@@ -45,8 +45,6 @@ in
         fprintd
         fzf
         git
-        gnome-boxes
-        gnome-software
         gnumake
         hyprland
         hyprlock
