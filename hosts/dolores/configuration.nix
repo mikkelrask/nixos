@@ -19,6 +19,13 @@ in
         _7zz = prev._7zz.override { useUasm = true; };
       })
     ];
+  nixpkgs.overlays = [
+    (final: prev: {
+      qtdeclarative = prev.qtdeclarative.override {
+        stdenv = prev.gcc13Stdenv;  # Use GCC 13 instead of GCC 14
+      };
+    })
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot = {
