@@ -27,6 +27,7 @@ in
 
       packages = with pkgs; [
         appimage-run
+        yt-dlp
         bat
         bitwarden
         qemu
