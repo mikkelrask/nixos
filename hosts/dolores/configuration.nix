@@ -14,16 +14,17 @@ in
   
   programs.steam.enable = true;
 
-  nixpkgs.overlays = [ # WORKAROUND for 7zz
-      (final: prev: {
-        _7zz = prev._7zz.override { useUasm = true; };
-      })
-    ];
-  nixpkgs.overlays = [
-    (final: prev: {
-      qtdeclarative = prev.qtdeclarative.override {
-        stdenv = prev.gcc13Stdenv;  # Use GCC 13 instead of GCC 14
-      };
+nixpkgs.overlays = [
+    (self: super: {
+      qtshadertools = super.qtshadertools.overrideAttrs (oldAttrs: {
+        version = "6.7.1"; # Or another known working version
+        src = super.fetchFromGitHub {
+          owner = "qt";
+          repo = "qtshadertools";
+          rev = "v6.7.1"; # Change this if needed
+          sha256 = "xxx"; # You need to find the correct hash
+        };
+      });
     })
   ];
 
