@@ -55,7 +55,6 @@ in
         lazygit
         libfprint
         libfprint-2-tod1-vfs0090
-        moonlight-qt
         mpv
         neovim
         nerdfetch
@@ -82,7 +81,6 @@ in
         unzip
         usbutils
         vim
-        vscode
         waybar
         wf-recorder
         wget
