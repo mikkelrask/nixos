@@ -53,8 +53,6 @@ in
         hyprshot
         kitty
         lazygit
-        libfprint
-        libfprint-2-tod1-vfs0090
         mpv
         neovim
         nerdfetch
