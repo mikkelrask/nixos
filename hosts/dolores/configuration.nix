@@ -108,8 +108,6 @@ nixpkgs.overlays = [
   };
 
   fonts.packages = with pkgs; [
-    nerd-fonts.noto
-    noto-fonts-cjk-sans
     nerd-fonts.hack
     nerd-fonts.fira-code
     nerd-fonts.fantasque-sans-mono
