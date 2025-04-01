@@ -191,8 +191,6 @@ nixpkgs.overlays = [
      jq
      jre
      julia
-     libfprint
-     libfprint-2-tod1-vfs0090
      lua
      lua-language-server
      lua51Packages.luarocks-nix
