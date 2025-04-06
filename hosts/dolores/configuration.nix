@@ -88,7 +88,7 @@ nixpkgs.overlays = [
 
   # RICE RICE BABY
   stylix.enable = true;
-  stylix.image = ./yosemite.png;
+  stylix.image = ./reflector-sheets.jpg;
   stylix.autoEnable = true;
   stylix.polarity = "dark";
   stylix.fonts = {
