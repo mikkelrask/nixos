@@ -2,7 +2,6 @@
 
 let
   homeDir = "/home/mr";
-  wallpaperPath = "/home/mr/Pictures/wallpapers/wallpapers/abstract/fluid-art.jpg";
   waybar_conf_dir = "${homeDir}/.config/waybar/";
   launcher = "wofi --show drun --show-icons --allow-images --allow-images --allow-markup --style ./wofi.css";
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''

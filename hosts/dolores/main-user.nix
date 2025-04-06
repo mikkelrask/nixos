@@ -35,7 +35,6 @@ in
         brave
         btop
         clang
-        code-cursor
         direnv
         doas
         docker
@@ -61,7 +60,6 @@ in
         pavucontrol
         pcmanfm
         pipx
-        plexamp
         pstree
         python3
         python311Packages.pip
