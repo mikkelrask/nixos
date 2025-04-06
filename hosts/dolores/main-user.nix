@@ -57,7 +57,7 @@ in
         neovim
         nerdfetch
         networkmanagerapplet
-        nodejs_22
+        nodejs_23
         pavucontrol
         pcmanfm
         pipx
