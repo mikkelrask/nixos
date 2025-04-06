@@ -65,6 +65,8 @@ in
         pstree
         python3
         python311Packages.pip
+        pyright
+        uv
         ranger
         ripgrep
         ryujinx
