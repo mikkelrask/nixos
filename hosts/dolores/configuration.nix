@@ -32,8 +32,9 @@ nixpkgs.overlays = [
   boot = {
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
+    lib.mkDefault = true;
     plymouth = {
-    theme = "rings";
+    theme = "motion";
       themePackages = with pkgs; [
         # By default we would install all themes
         (adi1090x-plymouth-themes.override {
