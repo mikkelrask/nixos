@@ -1,5 +1,5 @@
 # nixos config
-
+.
 Very basic, but at the same time, very personal config - wouldn't use it for anything other than maybe inspiration.
 
 
