@@ -97,7 +97,7 @@ in
         "$mod SHIFT, Q, killactive"
         "$mod, W, exec, $browser"
         "$mod SHIFT, C, togglefloating"
-        "CTRL, ESCAPE, exec, $terminal start btop"
+        "CTRL, ESCAPE, exec, $terminal -e btop"
         ", PRINT, exec, flameshot"
 
         # Media keys
