@@ -30,6 +30,7 @@ in
         yt-dlp
         bat
         bitwarden
+        vscode
         qemu
         virt-manager
         brave
