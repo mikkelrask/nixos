@@ -68,6 +68,7 @@ nixpkgs.overlays = [
   services.udev.packages = [ 
     pkgs.platformio-core
     pkgs.openocd
+    pkgs.libnotify
   ];
 
   nix.nixPath = [ "/home/mr/.nixos" ];
