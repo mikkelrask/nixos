@@ -27,6 +27,7 @@ in
 
       packages = with pkgs; [
         appimage-run
+        ghostty
         yt-dlp
         bat
         bitwarden
