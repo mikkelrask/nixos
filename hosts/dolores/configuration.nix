@@ -191,6 +191,7 @@ nixpkgs.overlays = [
      fprintd  
      fzf
      git
+     brightnessctl
      gnumake
      go
      jq
