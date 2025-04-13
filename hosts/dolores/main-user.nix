@@ -31,6 +31,7 @@ in
         yt-dlp
         bat
         bitwarden
+        moonlight-qt
         vscode
         qemu
         virt-manager
