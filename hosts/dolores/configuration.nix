@@ -217,6 +217,8 @@ nixpkgs.overlays = [
     enableSSHSupport = true;
   };
 
+
+
   # List services that you want to enable:
   xdg.portal.enable = true;
   xdg.portal.extraPortals = with pkgs; [
@@ -249,6 +251,13 @@ nixpkgs.overlays = [
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+   # Mount custom Btrfs subvolume
+  fileSystems."/nix/var-root" = {
+    device = "/dev/disk/by-uuid/8c4de8bb-1093-4efe-bd1e-a25710625c86";
+    fsType = "btrfs";
+    options = [ "subvol=nix/var-root" "compress=zstd" "noatime" ];
+  };
 
   # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
   # and migrated your data accordingly.
