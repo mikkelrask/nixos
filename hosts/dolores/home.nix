@@ -91,6 +91,7 @@ in
         "$mod, RETURN, exec, $terminal"
         "$mod, D, exec, $menu"
         "$mod, E, exec, wofi-emoji"
+        "$mod, N, exec ghostty -e notetaker"
         "CTRL $mod, L, exec, hyprlock"
         "$mod, F, fullscreen"
         "$mod SHIFT, X, exit"
