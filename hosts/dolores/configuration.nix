@@ -252,14 +252,13 @@ nixpkgs.overlays = [
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
-   # Mount custom Btrfs subvolume
-  fileSystems."/nix/var-root" = {
-    device = "/dev/disk/by-uuid/8c4de8bb-1093-4efe-bd1e-a25710625c86";
+  fileSystems."/var" = {
+    device = "/dev/disk/by-uuid/bf57e35b-f48f-4a30-bb42-b4b124e3d138";
     fsType = "btrfs";
     options = [ "subvol=nix/var-root" "compress=zstd" "noatime" ];
   };
 
-  # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
+# Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
   # and migrated your data accordingly.
   system.stateVersion = "24.05"; # Did you read the comment?
 
