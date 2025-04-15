@@ -201,8 +201,6 @@ nixpkgs.overlays = [
      lua-language-server
      lua51Packages.luarocks-nix
      lua51Packages.luasnip
-     php
-     php83Packages.composer
      pulseaudioFull
      tokyonight-gtk-theme
      tree-sitter
@@ -255,7 +253,7 @@ nixpkgs.overlays = [
   fileSystems."/var" = {
     device = "/dev/disk/by-uuid/bf57e35b-f48f-4a30-bb42-b4b124e3d138";
     fsType = "btrfs";
-    options = [ "subvol=nix/var-root" "compress=zstd" "noatime" ];
+    options = [ "subvol=var-root" "compress=zstd" "noatime" ];
   };
 
 # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
