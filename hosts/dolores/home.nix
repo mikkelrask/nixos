@@ -33,7 +33,7 @@ in
       "$terminal" = "ghostty";
       #"$browser" = "brave --enable-features=TouchpadOverscrollHistoryNavigation";
       #"$browser" = "appimage-run /home/mr/.local/bin/zen-x86_64.AppImage";
-      "$browser" = "flatpak run net.waterfox.waterfox";
+      "$browser" = "flatpak run app.zen_browser.zen ";
       "$filemanager" = "pcmanfm";
       "$menu" = "${launcher}";
 
