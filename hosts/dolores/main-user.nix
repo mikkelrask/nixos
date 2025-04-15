@@ -27,15 +27,8 @@ in
 
       packages = with pkgs; [
         appimage-run
-        ghostty
-        yt-dlp
         bat
         bitwarden
-        moonlight-qt
-        vscode
-        qemu
-        virt-manager
-        brave
         btop
         clang
         direnv
@@ -47,14 +40,15 @@ in
         flatpak
         fprintd
         fzf
+        ghostty
         git
         gnumake
         hyprland
         hyprlock
         hyprpaper
         hyprshot
-        kitty
         lazygit
+        moonlight-qt
         mpv
         neovim
         nerdfetch
@@ -62,12 +56,11 @@ in
         nodejs_23
         pavucontrol
         pcmanfm
-        pipx
         pstree
+        pyright
         python3
         python311Packages.pip
-        pyright
-        uv
+        qemu
         ranger
         ripgrep
         ryujinx
@@ -78,16 +71,19 @@ in
         sxiv
         tmux
         trayscale
-        typescript-language-server
         unzip
         usbutils
+        uv
         vim
+        virt-manager
+        vscode
         waybar
         wf-recorder
         wget
         wl-screenrec
         wofi
         wofi-emoji
+        yt-dlp
         zsh
       ];
     };

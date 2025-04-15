@@ -184,11 +184,9 @@ nixpkgs.overlays = [
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     cargo
      clang
      code-minimap
      file
-     fprintd  
      fzf
      git
      brightnessctl
@@ -196,13 +194,13 @@ nixpkgs.overlays = [
      go
      jq
      jre
-     julia
      lua
      lua-language-server
      lua51Packages.luarocks-nix
      lua51Packages.luasnip
      pulseaudioFull
      tokyonight-gtk-theme
+     typescript-language-server
      tree-sitter
      wl-clipboard-rs
   ];
