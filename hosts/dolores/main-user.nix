@@ -36,6 +36,7 @@ in
         docker
         eza
         fd
+        yq
         file
         flatpak
         fprintd
