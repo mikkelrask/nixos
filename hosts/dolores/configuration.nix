@@ -190,6 +190,7 @@ nixpkgs.overlays = [
      fzf
      git
      brightnessctl
+     unclutter
      gnumake
      go
      jq
