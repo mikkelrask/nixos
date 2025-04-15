@@ -253,7 +253,7 @@ nixpkgs.overlays = [
   fileSystems."/var" = {
     device = "/dev/disk/by-uuid/bf57e35b-f48f-4a30-bb42-b4b124e3d138";
     fsType = "btrfs";
-    options = [ "subvol=var-root" "compress=zstd" "noatime" ];
+    options = [ "subvol=var-root" "compress=zstd" "noatime" "x-systemd.device-timeout=10s" ];
   };
 
 # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
